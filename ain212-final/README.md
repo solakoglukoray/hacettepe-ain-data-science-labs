@@ -8,19 +8,20 @@ An end-to-end data science project predicting water potability from physicochemi
 
 ## Pipeline
 
-1. **Data Collection** — Environmental dataset (5000+ samples, 12 features)
-2. **Preprocessing & Cleaning** — Missing value handling, noise removal
-3. **EDA** — Feature distributions, correlation heatmap, statistical summaries
-4. **Clustering** — K-Means clustering with elbow method for optimal k
-5. **Predictive Modeling** — 3+ classification algorithms compared
-6. **Evaluation** — Confusion matrix, ROC curves, PR curves, F1-score
+1. **Data Collection** — Water quality dataset (7,996 samples, 20 features)
+2. **Preprocessing & Cleaning** — `#NUM!` error handling, negative value correction, outlier removal via IQR
+3. **EDA** — Feature distributions, correlation heatmap, skewness analysis, statistical summaries
+4. **Clustering** — K-Means and Agglomerative Clustering with silhouette score comparison
+5. **Predictive Modeling** — Logistic Regression, Decision Tree, Random Forest compared with GridSearchCV
+6. **Evaluation** — Confusion matrix, ROC curves, PR curves, classification report
 
 ## Models Compared
 
-- Random Forest ← best performer
-- + 2 additional classifiers
-
-**Techniques:** SMOTE oversampling (class imbalance), hyperparameter tuning via cross-validation
+| Model | Tuning |
+|-------|--------|
+| Logistic Regression | GridSearchCV |
+| Decision Tree | GridSearchCV |
+| Random Forest | GridSearchCV ← best performer |
 
 ## Run
 
@@ -30,4 +31,4 @@ jupyter notebook ain212_final.ipynb
 
 ## Topics
 
-`Classification` `EDA` `Clustering` `SMOTE` `Cross-validation` `ROC/PR curves`
+`Classification` `EDA` `Clustering` `GridSearchCV` `ROC/PR curves` `Silhouette score`
